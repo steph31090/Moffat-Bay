@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ===================== LOGIN PAGE ==================== */
+
+.login-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-left {
+    width: 75%;
+}
+
+.login-left img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 57%;
+    left: 30%;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.login-right {
+    width: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 30px 30px 30px;
+}
+
+.login-box {
+    width: 420px;
+    text-align: center;
+}
+
+.logo-img {
+    width: 300px;
+    margin-bottom: 16px;
+}
+
+.login-box h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.login-box p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.login-box h2 {
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 18px;
+}
+
+.login-box form {
+    text-align: left;
+}
+
+.email-row,
+.password-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 12px;
+    align-items: center;
+    width: 350px;
+    margin: 0 auto 10px auto;
+}
+
+.email-row label {
+	margin-left: 28px;
+    font-size: 15px;
+    color: #555;
+}
+
+.password-row label {
+	margin: right;
+    font-size: 15px;
+    color: #555;
+}
+
+.email-row input,
+.password-row input {
+    width: 95%;
+    padding: 8px 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0;
+
+}
+
+.password-row input{
+	margin-bottom: -5px;
+}
+
+.forgot-link {
+    display: block;
+    width: 260px;
+    margin-top: -5px;
+    margin: 0 0 12px 110px;
+    color: #0073e6;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.remember-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #666;
+}
+
+.remember-row input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.remember-row label {
+    margin: 0;
+    margin-top: 40px;
+}
+
+.signin-btn {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 15px;
+}
+
+.register-text a {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+
+/* ================= REGISTRATION PAGE ================= */
+
+.register-page {
+    background-image: url("/MoffatBay-AlphaTeam/images/Registration.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.register-container {
+    width: 330px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.register-container h1 {
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 22px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.password-note {
+    color: #cc6666;
+    font-size: 11px;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.register-container p {
+    margin-top: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.register-container a {
+    color: #0073e6;
+    text-decoration: underline;
+}
