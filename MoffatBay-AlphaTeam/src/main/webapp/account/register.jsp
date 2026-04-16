@@ -48,6 +48,9 @@ Alpha Team
 
 <body class="register-page">
 
+<!--Header Insert!--->
+<jsp:include page="../components/header.jsp" />
+
 <div class="register-container">
     <h1>Registration</h1>
 

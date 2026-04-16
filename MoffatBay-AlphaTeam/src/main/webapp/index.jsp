@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Welcome to Moffat Bay Lodge</title>
+
+    <!-- CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  </head>
+
+<body>
+
+  <!-- JS Preloader -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+				
+                    <!-- Logo  -->
+                    <a href="index.html" class="logo">
+                        <img src="images/Logo.jpg" alt="Moffat Bay Lodge Logo">
+                    </a>
+
+                    <!-- Menu -->
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="reservation.html">Book a reservation</a></li>
+                        <li><a href="reservation.html">Look up a reservation</a></li>
+                        <%
+					        if (session.getAttribute("user") == null) {
+					    %>
+        				<li><div class="border-button"><a href="account/login.jsp">Login To Your Account</a></div></li>
+    				    <li><div class="border-button"><a href="account/register.jsp">Register New Account</a></div></li>
+					    <%
+					        } else {
+					    %>
+       				 <li><div class="border-button"><a href="#">Welcome, <%= session.getAttribute("user") %></a></div></li>
+      				  <li><div class="border-button"><a href="logout.jsp">Logout</a></div></li>
+					    <%
+					        }
+					    %>                  
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <!-- Main Banner -->
+  <section id="section-1">
+    <div class="content-slider">
+      <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+      <input type="radio" id="banner2" class="sec-1-input" name="banner">
+      <input type="radio" id="banner3" class="sec-1-input" name="banner">
+      <input type="radio" id="banner4" class="sec-1-input" name="banner">
+      <div class="slider">
+        <div id="top-banner-1" class="banner">
+          <div class="banner-inner-wrapper header-text">
+            <div class="main-caption">
+              <h2>Stay with us at</h2>
+              <h1>Moffat Bay Lodge</h1>
+              <div class="border-button"><a href="about.html">Book a reservation</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="top-banner-2" class="banner">
+          <div class="banner-inner-wrapper header-text">
+            <div class="main-caption">
+              <h2>Hike with us at</h2>
+              <h1>Moffat Bay Lodge</h1>
+              <div class="border-button"><a href="about.html">Book a reservation</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="top-banner-3" class="banner">
+          <div class="banner-inner-wrapper header-text">
+            <div class="main-caption">
+              <h2>Whale watch with us at</h2>
+              <h1>Moffat Bay Lodge</h1>
+              <div class="border-button"><a href="about.html">Book a reservation</a></div>
+            </div>
+          </div>
+        </div>
+        <div id="top-banner-4" class="banner">
+          <div class="banner-inner-wrapper header-text">
+            <div class="main-caption">
+              <h2>Scuba Dive with us at</h2>
+              <h1>Moffat Bay Lodge</h1>
+              <div class="border-button"><a href="about.html">Book a reservation</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="controls">
+          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">1</span></label>
+          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">2</span></label>
+          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">3</span></label>
+          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">4</span></label>
+        </div>
+      </nav>
+    </div>
+  </section>
+  
+  <!-- Info Section -->
+  <div class="visit-country">
+    <div class="container">
+      <div class="row">
+
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="items">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="item">
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+                      <div class="image">
+                        <img src="images/country-01.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-7">
+                      <div class="right-content">
+                        <h4>Beautiful Stays</h4>
+                        <span>Modern Accomodations</span>
+                        <div class="main-button">
+                          <a href="about.html">Book Now</a>
+                        </div>
+                        <p>Visit our lodge and stay with us in our newly built, modern retreat in the heart of the beautiful pacific northwest.</p>
+                        <div class="text-button">
+                          <a href="about.html">Visit our "About Us" page to learn more<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="item">
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+                      <div class="image">
+                        <img src="images/country-02.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-7">
+                      <div class="right-content">
+                        <h4>Attractions</h4>
+                        <span>Hiking, Kayaking, Whale Watching, Scuba Diving</span>
+                        <div class="main-button">
+                          <a href="about.html">Book Now</a>
+                        </div>
+                        <p>Visit our selection of scenic hikes, beautiful kayaking tours, majestic whale watching and scuba diving experiences for all ages, interests and skills.</p>
+
+                        <div class="text-button">
+                          <a href="about.html">Visit our "Attractions" page to learn more<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="item last-item">
+                  <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+                      <div class="image">
+                        <img src="images/country-03.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-7">
+                      <div class="right-content">
+                        <h4>Share your Experiences!</h4>
+                        <span>Connect With Us! #MoffatBay</span>
+                        <div class="main-button">
+                          <a href="about.html">Book Now</a>
+                        </div>
+                        <p>Visit our Social Media sites to see pictures stories and news shared by staff and guests!</p>
+                        <ul class="info">
+                          <li><i class="fa-brands fa-facebook"></i><a href="about.html">Facebook</a></li>
+                          <li><i class="fa-brands fa-instagram"></i><a href="about.html">instagram</a></li>
+                          <li><i class="fa-brands fa-twitter"></i><a href="about.html">Twitter</a></li>
+                        </ul>
+                        <div class="text-button">
+                          <a href="about.html">Contact Us with Questions! <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="side-bar-map">
+            <div class="row">
+              <div class="col-lg-12">
+                <div id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.9545445599924!2d-123.16413001420244!3d48.61986978738752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f63117673f035%3A0xbcde95848200f427!2sBarren%20Island!5e0!3m2!1sen!2sus!4v1776292767288!5m2!1sen!2sus" width="100%" height="750px" frameborder="1" style="border:0; border-radius: 23px; " allowfullscreen=""></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Ready for an escape?</h2>
+          <h4>Book with us now!</h4>
+        </div>
+        <div class="col-lg-4">
+          <div class="border-button">
+            <a href="reservation.html">Make a reservation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2026 Alpha Team - Stephanie, Daniel, Sylvester, Reed. All rights reserved. 
+          <br>A Project for CSD460-H307: Software Development Capstone. Not a real place, sorry folks!</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="js/isotope.min.js"></script>
+  <script src="js/owl-carousel.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/custom.js"></script>
+
+  <script>
+    function bannerSwitcher() {
+      next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+      if (next.length) next.prop('checked', true);
+      else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+      clearInterval(bannerTimer);
+      bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+  </script>
+
+  </body>
+
+</html>

@@ -13,6 +13,7 @@ Alpha Team
         boolean validUser = dao.validateUser(email, password);
 
         if (validUser) {
+            session.setAttribute("user", email);  // 🔥 THIS LINE
             response.sendRedirect(request.getContextPath() + "/index.jsp");
         } else {
             out.println("<p style='color:red;'>Invalid email or password</p>");
@@ -31,7 +32,12 @@ Alpha Team
 
 <body>
 
+<!--Header Insert!--->
+<jsp:include page="../components/header.jsp" />
+
+
 <div class="login-page">
+
 
     <!-- LEFT SIDE IMAGE/TEXT -->
     <div class="login-left">
