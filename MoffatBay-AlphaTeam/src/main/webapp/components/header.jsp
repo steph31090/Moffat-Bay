@@ -10,7 +10,7 @@
 
     <!-- Your CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/indexstyle.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 </head>

@@ -27,7 +27,7 @@ Alpha Team
     <meta charset="UTF-8">
     <title>Moffat Bay - Login</title>
 
-    <link rel="stylesheet" href="/MoffatBay-AlphaTeam/css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 
 <body>

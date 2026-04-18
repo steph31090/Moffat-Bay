@@ -16,7 +16,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
     <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/indexstyle.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <link rel="stylesheet" href="css/owl.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
@@ -109,7 +109,7 @@
         <div id="top-banner-3" class="banner">
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
-              <h2>Whale watch with us at</h2>
+              <h2>Whale Watch with us at</h2>
               <h1>Moffat Bay Lodge</h1>
               <div class="border-button"><a href="about.html">Book a reservation</a></div>
             </div>
@@ -137,7 +137,7 @@
   </section>
   
   <!-- Info Section -->
-  <div class="visit-country">
+  <div class="infocards">
     <div class="container">
       <div class="row">
 
@@ -156,7 +156,9 @@
                     </div>
                     <div class="col-lg-8 col-sm-7">
                       <div class="right-content">
-                        <h4>Beautiful Stays</h4>
+                        <div class="vctext">
+                        Beautiful Stays
+                        </div>
                         <span>Modern Accomodations</span>
                         <div class="main-button">
                           <a href="about.html">Book Now</a>
@@ -180,7 +182,9 @@
                     </div>
                     <div class="col-lg-8 col-sm-7">
                       <div class="right-content">
-                        <h4>Attractions</h4>
+                        <div class="vctext">
+                        Attactions
+                        </div>
                         <span>Hiking, Kayaking, Whale Watching, Scuba Diving</span>
                         <div class="main-button">
                           <a href="about.html">Book Now</a>
@@ -205,7 +209,9 @@
                     </div>
                     <div class="col-lg-8 col-sm-7">
                       <div class="right-content">
-                        <h4>Share your Experiences!</h4>
+                        <div class="vctext">
+                        Share your Experiences!
+                        </div>
                         <span>Connect With Us! #MoffatBay</span>
                         <div class="main-button">
                           <a href="about.html">Book Now</a>
