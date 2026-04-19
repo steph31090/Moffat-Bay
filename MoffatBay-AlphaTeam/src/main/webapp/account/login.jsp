@@ -1,9 +1,9 @@
-<!-- Created by: Stephanie Lara
-Alpha Team
- -->
- <%@ page import="dao.UserDAO" %>
+
+<%@ page import="dao.UserDAO" %>
 
 <%
+    String errorMessage = "";
+
     if (request.getMethod().equalsIgnoreCase("post")) {
 
         String email = request.getParameter("email");
@@ -13,10 +13,11 @@ Alpha Team
         boolean validUser = dao.validateUser(email, password);
 
         if (validUser) {
-            session.setAttribute("user", email);  // 🔥 THIS LINE
+            session.setAttribute("user", email);
             response.sendRedirect(request.getContextPath() + "/index.jsp");
+            return;
         } else {
-            out.println("<p style='color:red;'>Invalid email or password</p>");
+            errorMessage = "Invalid email or password";
         }
     }
 %>
@@ -60,17 +61,17 @@ Alpha Team
             <p>Sign in to access your account.</p>
 
             <h2>Login</h2>
-
+			
             <form action="login.jsp" method="post">
 
 				<div class="email-row">
 				    <label for="email">Email:</label>
-				    <input type="email" id="email" name="email" placeholder="type your email">
+				    <input type="email" id="email" name="email" placeholder="type your email" required>
 				</div>
 				
 				<div class="password-row">
 				    <label for="password">Password:</label>
-				    <input type="password" id="password" name="password" placeholder="******">
+				    <input type="password" id="password" name="password" placeholder="******" required>
 				</div>
 			
 			    <a href="#" class="forgot-link" onclick="alert('Password recovery is not implemented yet.'); return false;">Forgot password?</a>
@@ -94,6 +95,13 @@ Alpha Team
     </div>
 
 </div>
+
+<% if (!errorMessage.isEmpty()) { %>
+<script>
+   	alert("<%= errorMessage %>");
+</script>
+<% } %>
+
 
 </body>
 </html>
