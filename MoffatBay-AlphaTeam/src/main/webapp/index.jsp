@@ -55,7 +55,7 @@
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="about.html">About us</a></li>
                         <li><a href="attractions.html">Attractions</a></li>
-                        <li><a href="reservation.html">Book a reservation</a></li>
+                        <li><a href="reservation.jsp">Book a reservation</a></li>
                         <li><a href="reservation.html">Look up a reservation</a></li>
                         <%
 					        if (session.getAttribute("user") == null) {

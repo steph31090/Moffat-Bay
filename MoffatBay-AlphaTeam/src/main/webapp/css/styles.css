@@ -504,6 +504,7 @@ footer p a:hover { opacity: 0.75; }
 .register-text a { color: #0073e6; text-decoration: underline; }
 
 
+
 /* ── Registration Page ─────────────────────────────────────── */
 .register-page {
   background: url('/MoffatBay-AlphaTeam/images/Registration.jpg') no-repeat center center / cover;
@@ -549,7 +550,18 @@ footer p a:hover { opacity: 0.75; }
 
 
 /* ── Responsive ────────────────────────────────────────────── */
-@media (max-width: 1200px) {
+.header-area .main-nav .nav li.auth a {
+  color: #fff !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  background-color: rgba(255,255,255,0.15) !important;
+}
+
+.header-area .main-nav .nav li.auth a:hover {
+  background-color: rgba(255,255,255,0.3) !important;
+}
+
+@media (max-width: 1200px) 	{
   .header-area .main-nav .nav li { padding: 0 10px; }
   .header-area .main-nav::before { display: none; }
 }
