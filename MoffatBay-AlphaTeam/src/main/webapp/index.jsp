@@ -269,7 +269,7 @@
       <div class="row">
         <div class="col-lg-12">
           <p>Copyright © 2026 Alpha Team - Stephanie, Daniel, Sylvester, Reed. All rights reserved. 
-          <br>A Project for CSD460-H307: Software Development Capstone. Not a real place, sorry folks!</a></p>
+          <br>A Project for CSD460-H307: Software Development Capstone. Not a real place, sorry folks!</p>
         </div>
       </div>
     </div>

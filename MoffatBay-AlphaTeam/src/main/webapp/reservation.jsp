@@ -147,6 +147,7 @@
 
     </form>
 </div>
+</div>
 
 <script>
     // Set today as minimum check-in date

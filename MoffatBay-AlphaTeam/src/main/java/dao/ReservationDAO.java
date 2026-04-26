@@ -21,7 +21,7 @@ public class ReservationDAO {
     // ─────────────────────────────────────────────
     public List<RoomBean> getRooms() {
         List<RoomBean> rooms = new ArrayList<>();
-        String sql = "SELECT roomId, roomType, nightlyRate, maxGuests FROM roomselection ORDER BY nightlyRate ASC";
+        String sql = "SELECT room_types_id, room_name, room_price, max_guests FROM Room_Types ORDER BY room_price ASC";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -29,10 +29,10 @@ public class ReservationDAO {
 
             while (rs.next()) {
                 RoomBean room = new RoomBean();
-                room.setRoomId(rs.getInt("roomId"));
-                room.setRoomType(rs.getString("roomType"));
-                room.setNightlyRate(rs.getDouble("nightlyRate"));
-                room.setMaxGuests(rs.getInt("maxGuests"));
+                room.setRoomId(rs.getInt("room_types_id"));
+                room.setRoomType(rs.getString("room_name"));
+                room.setNightlyRate(rs.getDouble("room_price"));
+                room.setMaxGuests(rs.getInt("max_guests"));
                 rooms.add(room);
             }
 
@@ -48,7 +48,7 @@ public class ReservationDAO {
     // Used when confirming a reservation
     // ─────────────────────────────────────────────
     public int getCustomerId(String email) {
-        String sql = "SELECT customerId FROM customer WHERE email = ?";
+        String sql = "SELECT customer_id FROM customer WHERE email = ?";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -57,7 +57,7 @@ public class ReservationDAO {
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
-                    return rs.getInt("customerId");
+                    return rs.getInt("customer_id");
                 }
             }
 
@@ -73,19 +73,18 @@ public class ReservationDAO {
     // Returns the generated reservationId
     // ─────────────────────────────────────────────
     public int saveReservation(ReservationBean reservation) {
-        String sql = "INSERT INTO reservation (customerId, roomId, numGuests, checkIn, checkOut, totalNights, totalCost, status) "
-                   + "VALUES (?, ?, ?, ?, ?, ?, ?, 'confirmed')";
+    	String sql = "INSERT INTO Reservations (customer_id, status, room_types_id, guest_count, checkIn_date, checkOut_date, total_price) "
+    	           + "VALUES (?, 'Confirmed', ?, ?, ?, ?, ?)";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
-            pstmt.setInt(1, reservation.getCustomerId());
-            pstmt.setInt(2, reservation.getRoomId());
-            pstmt.setInt(3, reservation.getNumGuests());
-            pstmt.setDate(4, java.sql.Date.valueOf(reservation.getCheckIn()));
-            pstmt.setDate(5, java.sql.Date.valueOf(reservation.getCheckOut()));
-            pstmt.setLong(6, reservation.getTotalNights());
-            pstmt.setDouble(7, reservation.getTotalCost());
+        	pstmt.setInt(1, reservation.getCustomerId());
+        	pstmt.setInt(2, reservation.getRoomId());
+        	pstmt.setInt(3, reservation.getNumGuests());
+        	pstmt.setDate(4, java.sql.Date.valueOf(reservation.getCheckIn()));
+        	pstmt.setDate(5, java.sql.Date.valueOf(reservation.getCheckOut()));
+        	pstmt.setDouble(6, reservation.getTotalCost());
 
             pstmt.executeUpdate();
 
