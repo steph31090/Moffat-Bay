@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <!-- Alpha Team
 	Created by: Reed Bunnell -->
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="model.AboutUsBean" %>
 
+=======
+>>>>>>> 63ae424 (update About us)
 <html>
 <head>
     <title>About Us - Moffat Bay Lodge</title>
@@ -28,16 +31,21 @@
 
 <h1>About Moffat Bay Lodge</h1>
 
-<%
-    ArrayList<AboutUsBean> aboutList = AboutUsBean.getAboutInfo();
-
-    for(AboutUsBean item : aboutList) {
-%>
+<div class="section">
+    <h2>Our Story</h2>
+    <p>
+        Moffat Bay Lodge is a peaceful getaway located on Joviedsa Island,
+        offering beautiful views, outdoor adventures, and relaxing accommodations.
+    </p>
+</div>
 
 <div class="section">
-    <h2><%= item.getTitle() %></h2>
-    <p><%= item.getContent() %></p>
+    <h2>What We Offer</h2>
+    <p>
+        Guests can enjoy hiking, kayaking, whale watching, and a full-service marina.
+    </p>
 </div>
+
 <hr>
 
 <h2>Contact Us</h2>
@@ -54,9 +62,6 @@
 
     <input type="submit" value="Send Message">
 </form>
-<%
-    }
-%>
 
 </body>
 </html>
