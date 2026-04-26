@@ -1,4 +1,5 @@
-
+<!-- Alpha Team
+	Created by: Stephanie Lara -->
 <%@ page import="dao.UserDAO" %>
 
 <%

@@ -1,3 +1,6 @@
+<!-- Alpha Team
+	Created by: Sylvester Brandon -->
+
 <%@ page import="dao.ReservationDAO" %>
 <%@ page import="beans.RoomBean" %>
 <%@ page import="java.util.List" %>

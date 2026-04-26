@@ -1,3 +1,5 @@
+<!-- Alpha Team
+	Created by: Reed Bunnell -->
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="model.AboutUsBean" %>
 

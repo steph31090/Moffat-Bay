@@ -1,3 +1,7 @@
+/* Alpha Team
+ * Created by: Slyvester Brandon
+ */
+
 package beans;
 
 public class ReservationBean {

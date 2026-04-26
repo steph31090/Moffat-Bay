@@ -1,3 +1,5 @@
+<!-- Alpha Team
+	Created by: Daniel Graham -->
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 

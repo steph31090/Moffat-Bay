@@ -1,3 +1,7 @@
+/* Alpha Team
+ * Created by: Stephanie Lara
+ */
+
 package dao;
 
 import java.sql.Connection;

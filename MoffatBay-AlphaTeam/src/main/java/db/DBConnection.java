@@ -1,3 +1,7 @@
+/* Alpha Team
+ * Created by: Stephanie Lara
+ */
+
 package db;
 
 import java.sql.Connection;

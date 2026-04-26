@@ -1,3 +1,7 @@
+/* Alpha Team
+ * Created by: Reed Bunnell
+ */
+
 package model;
 
 import java.sql.*;
@@ -25,9 +29,9 @@ public class AboutUsBean {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/moffat_bay",
+                "jdbc:mysql://localhost:3306/moffatbay", // corrected
                 "alpha",
-                "password" // change if needed
+                "Team" // corrected password
             );
 
             Statement stmt = conn.createStatement();

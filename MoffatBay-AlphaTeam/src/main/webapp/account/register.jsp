@@ -1,6 +1,6 @@
-<!-- Created by: Stephanie Lara
-Alpha Team
- -->
+<!-- Alpha Team
+	Created by: Stephanie Lara -->
+	
 <%@ page import="beans.UserBean" %>
 <%@ page import="dao.UserDAO" %>
 

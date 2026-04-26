@@ -1,3 +1,6 @@
+/* Alpha Team
+ * Created by: Reed Bunnell
+ */
 package model;
 
 import java.sql.*;
@@ -19,9 +22,9 @@ public class ContactBean {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/moffat_bay",
+                "jdbc:mysql://localhost:3306/moffatbay", // corrected
                 "alpha",
-                "password" // change if needed
+                "team" // corrected password
             );
 
             String sql = "INSERT INTO contact_messages (name, email, message) VALUES (?, ?, ?)";
