@@ -1,7 +1,7 @@
 <!-- Alpha Team
 	Created by: Reed Bunnell -->
 
-<%@ page import="model.ContactBean" %>
+<%@ page import="beans.ContactBean" %>
 
 <%
     String name = request.getParameter("name");

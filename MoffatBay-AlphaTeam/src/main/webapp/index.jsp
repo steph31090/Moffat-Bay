@@ -68,7 +68,7 @@
 					        } else {
 					    %>
        				 <li><div class="border-button"><a href="#">Welcome, <%= session.getAttribute("user") %></a></div></li>
-      				  <li><div class="border-button"><a href="logout.jsp">Logout</a></div></li>
+      				  <li><div class="border-button"><a href="account/logout.jsp">Logout</a></div></li>
 					    <%
 					        }
 					    %>                  
