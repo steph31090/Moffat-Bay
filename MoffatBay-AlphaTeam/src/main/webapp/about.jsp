@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 <!-- Alpha Team
-	Created by: Reed Bunnell -->
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="model.AboutUsBean" %>
-
-=======
->>>>>>> 63ae424 (update About us)
+    Created by: Reed Bunnell -->
+    
 <html>
 <head>
     <title>About Us - Moffat Bay Lodge</title>
