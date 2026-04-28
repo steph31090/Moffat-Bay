@@ -154,6 +154,8 @@ section { margin-top: var(--section-gap); }
   top: 0; left: 0; right: 0;
   z-index: 100;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
 }
 .header-area.header-sticky { min-height: 70px; }
 
@@ -167,30 +169,32 @@ section { margin-top: var(--section-gap); }
   transition: var(--transition);
 }
 
-.header-area .main-nav { display: flex; padding: 0 30px; background: transparent; }
+.header-area .main-nav { display: flex; align-items: center; padding: 0 15px; background: transparent; flex-wrap: nowrap; }
 .background-header .main-nav { padding: 0; }
 
-.header-area .main-nav .logo { flex-basis: 30%; transition: var(--transition); }
-.header-area .main-nav .logo img { width: 250px; margin-top: 5px; }
-.background-header .main-nav .logo img { width: 159px; }
+.header-area .main-nav .logo { flex-shrink: 0; transition: var(--transition); }
+.header-area .main-nav .logo img { width: 180px; margin-top: 4px; }
+.background-header .main-nav .logo img { width: 140px; }
 
 .header-area .main-nav .nav {
-  flex-basis: 70%;
+  flex: 1;
   justify-content: flex-end;
-  margin-top: 15px;
+  margin-top: 0;
   position: relative;
   z-index: 999;
   transition: var(--transition);
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
-.header-area .main-nav .nav li { padding: 0 10px; }
+.header-area .main-nav .nav li { padding: 0 2px; }
 .header-area .main-nav .nav li a {
   display: block;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
-  letter-spacing: 0.5px;
-  padding: 8px 15px;
+  letter-spacing: 0.3px;
+  padding: 6px 9px;
   border-radius: 18px;
   transition: var(--transition);
 }
@@ -628,3 +632,178 @@ footer p a:hover { opacity: 0.75; }
   .visit-country .item .right-content h4 { margin-top: 20px; }
   .main-button a { text-align: center; }
 }
+
+/* ── Lookup Page ── */
+
+/* Hero Banner */
+.lookup-hero {
+  background: url('../images/banner-03.jpg') no-repeat center center / cover;
+  position: relative;
+  height: 380px;
+  display: flex;
+  align-items: flex-end;
+}
+.lookup-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.65));
+}
+.lookup-hero .container { position: relative; z-index: 1; padding-bottom: 48px; }
+.lookup-hero-text h6 {
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.15);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+.lookup-hero-text h2 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.lookup-hero-text p { color: rgba(255,255,255,0.8); font-size: 16px; margin: 0; }
+
+/* Body */
+.lookup-body { padding: 60px 0 80px; background: var(--light-bg); }
+
+/* Card */
+.lookup-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.lookup-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.lookup-card-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+.lookup-res-id { font-size: 13px; color: var(--muted); }
+
+.lookup-card-body { padding: 24px 32px; }
+
+/* Detail grid rows */
+.lookup-detail-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+.lookup-detail-item { flex: 1; }
+.lookup-detail-item label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.lookup-detail-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Total row */
+.lookup-card-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0fbfc;
+  border-top: 1px solid #cceef1;
+  border-bottom: 1px solid #cceef1;
+  padding: 18px 32px;
+}
+.lookup-card-total span { font-size: 14px; font-weight: 600; color: var(--muted); }
+.lookup-card-total strong { font-size: 26px; font-weight: 800; color: var(--brand); }
+
+/* Footer */
+.lookup-card-footer {
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Status badges */
+.lookup-status {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.lookup-status-confirmed { background: #e6f9f0; color: #1a9e60; }
+.lookup-status-cancelled { background: #fff0f0; color: #c0392b; }
+.lookup-status-pending   { background: #fff8e6; color: #b37a00; }
+
+/* Form fields */
+.lookup-field { margin-bottom: 18px; }
+.lookup-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.lookup-field input {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 15px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafafa;
+}
+.lookup-field input:focus { border-color: var(--brand); background: #fff; }
+
+/* Error */
+.lookup-error {
+  color: #c0392b;
+  font-size: 13px;
+  background: #fff0f0;
+  border: 1px solid #f5c6c6;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 12px 0 0;
+}
+
+/* Lodge info block under map */
+.lookup-lodge-info {
+  background: #fff;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 16px 20px;
+  margin-top: -6px;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+.lookup-lodge-info p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.8; }
+.lookup-lodge-info p strong { color: var(--text); }

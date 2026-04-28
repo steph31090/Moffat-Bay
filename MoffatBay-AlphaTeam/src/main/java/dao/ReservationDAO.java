@@ -104,4 +104,49 @@ public class ReservationDAO {
 
         return -1;
     }
+
+    // ─────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    // Look up a reservation by reservation ID and last name
+    // Returns a ReservationBean with guest name, or null if not found
+    // ─────────────────────────────────────────────
+    public ReservationBean lookupReservation(int reservationId, String lastName) {
+        String sql = "SELECT r.reservation_id, r.status, r.room_types_id, rt.room_name, rt.room_price, "
+                   + "r.guest_count, r.checkIn_date, r.checkOut_date, r.total_price, "
+                   + "c.first_name, c.last_name "
+                   + "FROM Reservations r "
+                   + "JOIN Customer c ON r.customer_id = c.customer_id "
+                   + "JOIN Room_Types rt ON r.room_types_id = rt.room_types_id "
+                   + "WHERE r.reservation_id = ? AND LOWER(c.last_name) = LOWER(?)";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, reservationId);
+            pstmt.setString(2, lastName);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    ReservationBean res = new ReservationBean();
+                    res.setReservationId(rs.getInt("reservation_id"));
+                    res.setStatus(rs.getString("status"));
+                    res.setRoomId(rs.getInt("room_types_id"));
+                    res.setRoomType(rs.getString("room_name"));
+                    res.setNightlyRate(rs.getDouble("room_price"));
+                    res.setNumGuests(rs.getInt("guest_count"));
+                    res.setCheckIn(rs.getString("checkIn_date"));
+                    res.setCheckOut(rs.getString("checkOut_date"));
+                    res.setTotalCost(rs.getDouble("total_price"));
+                    res.setFirstName(rs.getString("first_name"));
+                    res.setLastName(rs.getString("last_name"));
+                    return res;
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("DB ERROR: " + e.getMessage(), e);
+        }
+
+        return null;
+    }
 }

@@ -12,7 +12,7 @@
 <body>
 <%
     session.invalidate();
-	response.sendRedirect(request.getContextPath() + "/index.jsp");
+    response.sendRedirect("index.jsp");
 %>
 </body>
 </html>

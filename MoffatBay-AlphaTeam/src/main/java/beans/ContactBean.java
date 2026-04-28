@@ -1,7 +1,3 @@
-/* Alpha Team
- * Created by: Reed Bunnell
- */
-
 package beans;
 
 import java.sql.*;
@@ -25,7 +21,7 @@ public class ContactBean {
             Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/moffatbay",
                 "alpha",
-                "team"
+                "password"
             );
 
             String sql = "INSERT INTO contact_us (name, email, message) VALUES (?, ?, ?)";

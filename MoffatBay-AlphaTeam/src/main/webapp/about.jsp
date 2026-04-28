@@ -1,6 +1,8 @@
 <!-- Alpha Team
     Created by: Reed Bunnell -->
-    
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html>
 <head>
     <title>About Us - Moffat Bay Lodge</title>
@@ -8,7 +10,7 @@
         body {
             font-family: Arial;
             margin: 40px;
-            background-color: #f4f4f4;
+            background-color: var(--light-bg);
         }
         .section {
             background: white;
@@ -23,6 +25,8 @@
 </head>
 
 <body>
+
+<%@ include file="components/header.jsp" %>
 
 <h1>About Moffat Bay Lodge</h1>
 
@@ -43,6 +47,8 @@
 
 <hr>
 
+<div class="section">
+
 <h2>Contact Us</h2>
 
 <form action="contactProcess.jsp" method="post">
@@ -57,6 +63,8 @@
 
     <input type="submit" value="Send Message">
 </form>
+
+</div>
 
 </body>
 </html>

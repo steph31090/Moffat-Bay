@@ -1,18 +1,12 @@
-<!--  Alpha Team
-	Created by: Daniel Graham -->
-
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moffat Bay Lodge</title>
 
-    <!-- Bootstrap -->
     <link href="${pageContext.request.contextPath}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Your CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.css">
