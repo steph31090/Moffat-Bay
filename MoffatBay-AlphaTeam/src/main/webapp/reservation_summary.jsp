@@ -121,19 +121,19 @@
         <% } %>
 
         <label>Room Type:</label>
-        <input type="text" value="<%= draft.getRoomType() %>" disabled style="width: 100%; margin-bottom: 12px;">
-
+        <input type="text" value="<%= draft.getRoomName() %>" disabled style="width: 100%; margin-bottom: 12px;">
+        
         <label>Check-In Date:</label>
-        <input type="text" value="<%= draft.getCheckIn() %>" disabled style="width: 100%; margin-bottom: 12px;">
-
+        <input type="text" value="<%= draft.getCheckInDate() %>" disabled style="width: 100%; margin-bottom: 12px;">
+        
         <label>Check-Out Date:</label>
-        <input type="text" value="<%= draft.getCheckOut() %>" disabled style="width: 100%; margin-bottom: 12px;">
-
+        <input type="text" value="<%= draft.getCheckOutDate() %>" disabled style="width: 100%; margin-bottom: 12px;">
+        
         <label>Number of Nights:</label>
         <input type="text" value="<%= draft.getTotalNights() %>" disabled style="width: 100%; margin-bottom: 12px;">
 
         <label>Number of Guests:</label>
-        <input type="text" value="<%= draft.getNumGuests() %>" disabled style="width: 100%; margin-bottom: 12px;">
+        <input type="text" value="<%= draft.getGuestCount() %>" disabled style="width: 100%; margin-bottom: 12px;">
 
         <label>Subtotal:</label>
         <input type="text" value="$<%= String.format("%.2f", draft.getSubtotal()) %>" disabled style="width: 100%; margin-bottom: 12px;">
@@ -142,7 +142,7 @@
         <input type="text" value="$<%= String.format("%.2f", draft.getTax()) %>" disabled style="width: 100%; margin-bottom: 12px;">
 
         <label>Total Charged:</label>
-        <input type="text" value="$<%= String.format("%.2f", draft.getTotalCost()) %>" disabled style="width: 100%; margin-bottom: 20px;">
+        <input type="text" value="$<%= String.format("%.2f", draft.getTotalPrice()) %>" disabled style="width: 100%; margin-bottom: 20px;">
 
         <form action="reservation_summary.jsp" method="post">
             <input type="hidden" name="action" value="confirm" />

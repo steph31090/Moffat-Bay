@@ -1,23 +1,27 @@
 /* Alpha Team
- * Created by: Slyvester Brandon
+ * Created by: Sylvester Brandon
  */
 
 package beans;
 
 public class ReservationBean {
-    private int reservationId;
-    private int customerId;
-    private int roomId;
-    private String roomType;
-    private double nightlyRate;
-    private int numGuests;
-    private String checkIn;
-    private String checkOut;
-    private long totalNights;
-    private double subtotal;
-    private double tax;
-    private double totalCost;
-    private String status;
+
+    // Matches reservations table columns exactly
+    private int    reservationId;   // reservation_id
+    private int    customerId;      // customer_id
+    private String status;          // status
+    private int    roomTypesId;     // room_types_id
+    private int    guestCount;      // guest_count
+    private String checkInDate;     // checkIn_date
+    private String checkOutDate;    // checkOut_date
+    private double totalPrice;      // total_price
+
+    // Extra fields for display purposes (not in reservations table)
+    private String roomName;        // from room_types.room_name
+    private double roomPrice;       // from room_types.room_price
+    private long   totalNights;     // calculated
+    private double subtotal;        // calculated
+    private double tax;             // calculated
 
     public int getReservationId() {
         return reservationId;
@@ -35,52 +39,68 @@ public class ReservationBean {
         this.customerId = customerId;
     }
 
-    public int getRoomId() {
-        return roomId;
+    public String getStatus() {
+        return status;
     }
 
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getRoomType() {
-        return roomType;
+    public int getRoomTypesId() {
+        return roomTypesId;
     }
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
+    public void setRoomTypesId(int roomTypesId) {
+        this.roomTypesId = roomTypesId;
     }
 
-    public double getNightlyRate() {
-        return nightlyRate;
+    public int getGuestCount() {
+        return guestCount;
     }
 
-    public void setNightlyRate(double nightlyRate) {
-        this.nightlyRate = nightlyRate;
+    public void setGuestCount(int guestCount) {
+        this.guestCount = guestCount;
     }
 
-    public int getNumGuests() {
-        return numGuests;
+    public String getCheckInDate() {
+        return checkInDate;
     }
 
-    public void setNumGuests(int numGuests) {
-        this.numGuests = numGuests;
+    public void setCheckInDate(String checkInDate) {
+        this.checkInDate = checkInDate;
     }
 
-    public String getCheckIn() {
-        return checkIn;
+    public String getCheckOutDate() {
+        return checkOutDate;
     }
 
-    public void setCheckIn(String checkIn) {
-        this.checkIn = checkIn;
+    public void setCheckOutDate(String checkOutDate) {
+        this.checkOutDate = checkOutDate;
     }
 
-    public String getCheckOut() {
-        return checkOut;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setCheckOut(String checkOut) {
-        this.checkOut = checkOut;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
+    }
+
+    public double getRoomPrice() {
+        return roomPrice;
+    }
+
+    public void setRoomPrice(double roomPrice) {
+        this.roomPrice = roomPrice;
     }
 
     public long getTotalNights() {
@@ -107,21 +127,6 @@ public class ReservationBean {
         this.tax = tax;
     }
 
-    public double getTotalCost() {
-        return totalCost;
-    }
-
-    public void setTotalCost(double totalCost) {
-        this.totalCost = totalCost;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     private String firstName;
     private String lastName;

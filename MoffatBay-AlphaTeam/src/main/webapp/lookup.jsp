@@ -102,22 +102,22 @@
                 <div class="lookup-detail-row">
                   <div class="lookup-detail-item">
                     <label>Room Type</label>
-                    <span><%= result.getRoomType() %></span>
+                    <span><%= result.getRoomTypesId() %></span>
                   </div>
                   <div class="lookup-detail-item">
                     <label>Guests</label>
-                    <span><%= result.getNumGuests() %></span>
+                    <span><%= result.getGuestCount() %></span>
                   </div>
                 </div>
 
                 <div class="lookup-detail-row">
                   <div class="lookup-detail-item">
                     <label>Check-In</label>
-                    <span><%= result.getCheckIn() %></span>
+                    <span><%= result.getCheckinDate() %></span>
                   </div>
                   <div class="lookup-detail-item">
                     <label>Check-Out</label>
-                    <span><%= result.getCheckOut() %></span>
+                    <span><%= result.getCheckoutDate() %>
                   </div>
                 </div>
 
