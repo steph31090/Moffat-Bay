@@ -37,7 +37,8 @@
 			    if (session.getAttribute("user") == null) {
 			  %>
 			    <li class="auth">
-			      <a class="btn-outline" href="${pageContext.request.contextPath}/account/login.jsp">Login</a>
+			      <!-- Stephanie: updated correct path -->
+			      <a class="btn-outline" href="${pageContext.request.contextPath}/account/login.jsp">Login</a> 
 			    </li>
 			  <%
 			    } else {
@@ -46,7 +47,7 @@
 			      <a class="btn-outline" href="#">Welcome, <%= session.getAttribute("user") %></a>
 			    </li>
 			    <li class="auth">
-			      <a class="btn-outline" href="${pageContext.request.contextPath}/logout.jsp">Logout</a>
+			      <a class="btn-outline" href="${pageContext.request.contextPath}/account/logout.jsp">Logout</a>
 			    </li>
 			  <%
 			    }

@@ -43,7 +43,10 @@
     <meta charset="UTF-8">
     <title>Registration</title>
 
-    <link rel="stylesheet" href="/MoffatBay-AlphaTeam/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css?v=10">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.css">
 </head>
 
 <body class="register-page">
@@ -81,12 +84,23 @@
         <label>Re-type Password:</label>
         <input type="password" name="confirmPassword" required>
 
-        <input type="submit" value="Submit" class="submit-btn">
-        
+		<div class="main-button">
+		    <a href="#" onclick="this.closest('form').requestSubmit(); return false;">
+		        Submit
+		    </a>
+		</div>
         <p>
-			Already have an account?
-			<a href="login.jsp">Back to Login</a>
+			Already have an account? <br>
 		</p>
+		
+
+		<div class="text-button">
+			<a href="login.jsp"> 
+			Back to Login <i class="fa fa-arrow-right"></i>
+			</a>
+	  	</div>
+		
+
 
     </form>
 </div>

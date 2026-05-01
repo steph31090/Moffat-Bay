@@ -426,92 +426,6 @@ footer p a { color: #fff; font-weight: 500; transition: var(--transition); }
 footer p a:hover { opacity: 0.75; }
 
 
-/* ── Login Page ────────────────────────────────────────────── */
-.login-page { display: flex; min-height: 100vh; }
-
-.login-left { width: 60%; }
-.login-left img { width: 100%; height: 100vh; object-fit: cover; display: block; }
-
-.image-text {
-  position: absolute;
-  top: 57%; left: 30%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  color: white;
-  font-size: 42px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.3;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-.login-right {
-  width: 40%;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 30px 30px;
-}
-.login-box { width: 420px; text-align: center; }
-.logo-img   { width: 300px; margin-bottom: 16px; }
-
-.login-box h1 { font-size: 26px; margin-bottom: 6px; color: #444; }
-.login-box h2 { font-size: 18px; margin-bottom: 6px; color: #333; }
-.login-box p  { color: #555; margin-bottom: 30px; }
-.login-box form { text-align: left; }
-
-.email-row,
-.password-row {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  column-gap: 12px;
-  align-items: center;
-  width: 350px;
-  margin: 0 auto 10px;
-}
-.email-row label    { margin-left: 28px; font-size: 15px; color: #555; }
-.password-row label { font-size: 15px; color: #555; }
-
-.email-row input,
-.password-row input { width: 95%; padding: 8px; border: 1px solid #999; border-radius: var(--radius-sm); font-size: 14px; margin: 0; }
-
-.forgot-link {
-  display: block;
-  width: 260px;
-  margin: 4px 0 12px 110px;
-  color: #0073e6;
-  text-decoration: underline;
-  font-size: 13px;
-}
-
-.remember-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-  font-size: 14px;
-  color: #666;
-}
-.remember-row input[type="checkbox"] { width: auto; margin: 0; }
-.remember-row label { margin: 0; }
-
-.signin-btn {
-  display: block;
-  margin: 0 auto 30px;
-  padding: 10px 26px;
-  border: 1px solid #ccc;
-  border-radius: var(--radius-sm);
-  background-color: #f5f5f5;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.register-text { text-align: center; font-size: 15px; }
-.register-text a { color: #0073e6; text-decoration: underline; }
-
-
 
 /* ── Registration Page ─────────────────────────────────────── */
 .register-page {
@@ -522,39 +436,95 @@ footer p a:hover { opacity: 0.75; }
   align-items: center;
   padding: 30px 0;
 }
+
 .register-container {
   width: 330px;
   padding: 25px;
-  background: rgba(255,255,255,0.92);
-  border: 1px solid #999;
-  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.96); 
+  border: 1px solid rgba(0,0,0,0.05); 
+  border-radius: 23px;
+  box-shadow: 0 12px 45px rgba(0,0,0,0.3);
 }
-.register-container h1    { text-align: center; margin-bottom: 22px; font-size: 22px; }
-.register-container label { display: block; margin-bottom: 5px; color: #555; font-size: 14px; }
+
+.register-container h1    { 
+	text-align: center; 
+	margin-bottom: 22px; 
+	font-size: 22px; 
+	color: var(--text);
+}
+
+.register-container label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #afafaf;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
 .register-container input[type="text"],
 .register-container input[type="email"],
 .register-container input[type="password"] {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #999;
-  border-radius: var(--radius-sm);
-  font-size: 14px;
+  padding: 11px 14px;
+  font-size: 15px;
+  border: 1.5px solid #eee;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  margin-bottom: 14px;
 }
-.password-note { color: #cc6666; font-size: 11px; display: block; margin: 2px 0 6px; line-height: 1.2; }
-.submit-btn {
-  display: block;
-  width: 100%;
-  padding: 9px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: var(--radius-sm);
-  background: #eee;
-  cursor: pointer;
-  font-size: 14px;
+
+.password-note { 
+	color: #cc6666; 
+	font-size: 11px; 
+	display: block; 
+	margin: 2px 0 6px; 
+	line-height: 1.2; 
 }
-.register-container p { margin-top: 14px; font-size: 14px; text-align: center; }
-.register-container a { color: #0073e6; text-decoration: underline; }
+
+.register-container p { 
+	margin-top: 14px; 
+	font-size: 14px; 
+	text-align: center; 
+}
+
+.register-container a { 
+	color: var(--brand); 
+	text-decoration: underline; 
+}
+
+.register-container .main-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+.register-container input:focus {
+  border-color: var(--brand);
+  background: #fff;
+  outline: none;
+}
+
+.register-container a,
+.register-container a:visited,
+.register-container a:hover,
+.register-container a:active {
+  color: var(--brand) !important;
+}
+
+.register-container .main-button a {
+  color: #fff !important;
+}
+
+.register-container p {
+  color: #888;
+}
+
+.text-button {
+  text-align: center;
+}
 
 
 /* ── Responsive ────────────────────────────────────────────── */
@@ -807,3 +777,178 @@ footer p a:hover { opacity: 0.75; }
 }
 .lookup-lodge-info p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.8; }
 .lookup-lodge-info p strong { color: var(--text); }
+
+/* ── Login Page ────────────────────────────────────────────── */
+.login-page { 
+	display: flex; 
+	min-height: 100vh; 
+}
+
+.login-left { 
+	width: 60%; 
+}
+
+.login-left img { 
+	width: 100%; 
+	height: 100vh; 
+	object-fit: cover; 
+	display: block; 
+}
+
+.image-text {
+	position: absolute;
+	top: 57%; left: 30%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	color: white;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.3;
+	text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.login-right {
+	width: 40%;
+	background-color: #f7f7f7 !important;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 60px 30px 30px;
+}
+
+.login-box { 
+	width: 420px; 
+	text-align: center; 
+}
+
+.logo-img { 
+	width: 300px; 
+	margin-bottom: 16px; 
+}
+
+.login-box h1 { 
+	font-size: 26px; 
+	margin-bottom: 6px; 
+	color: #444; 
+}
+
+.login-box h2 { 
+	font-size: 18px; 
+	margin-bottom: 6px; 
+	color: #333; 
+}
+
+.login-box p  { 
+	color: #555; 
+	margin-bottom: px; 
+}
+
+.login-box form { 
+	text-align: left; 
+}
+
+.email-row,
+.password-row {
+	font-size: 15px;
+	color: #555;
+	display: grid;
+	grid-template-columns: 60px 1fr;
+	column-gap: 12px;
+	align-items: center;
+	width: 350px;
+	margin: 0 auto 10px;
+}
+
+.email-row label    { 
+	transform: translateX(-8px); 
+	font-size: 15px; 
+	color: #555; 
+}
+
+.password-row label { 
+	margin-left: -11px; 
+	font-size: 15px; 
+	color: #555; 
+}
+
+.email-row input,
+.password-row input {
+  width: 95%;
+  padding: 11px 14px;
+
+  background: #f5f5f5;
+  border: 1.5px solid #e0e0e0;
+
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.email-row input:focus,
+.password-row input:focus {
+  border-color: var(--brand);
+  background: #fff;
+  outline: none;
+}
+.forgot-link {
+	display: block;
+	width: 260px;
+	margin: 4px 0 40px 110px;
+	color: var(--brand);
+	text-decoration: underline;
+	font-size: 13px;
+}
+
+.remember-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin-top: 55px;
+	margin-bottom: 14px;
+	font-size: 14px;
+	color: #666;
+}
+
+.remember-row input[type="checkbox"] { 
+	width: auto; 
+	margin: 0; 
+}
+
+.remember-row label { 
+	margin: 0; 
+}
+
+.signin-btn {
+	display: block;
+	margin: 0 auto 30px;
+	padding: 10px 26px;
+	border: 1px solid #ccc;
+	border-radius: var(--radius-sm);
+	background-color: #f5f5f5;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.register-text { 
+	text-align: center; 
+	font-size: 15px; 
+}
+
+.register-text a { 
+	color: var(--brand);
+	text-decoration: underline; 
+}
+
+.forgot-link:hover,
+.register-text a:hover {
+  color: var(--brand-dark);
+}
+
+.forgot-link,
+.forgot-link:visited,
+.register-text a,
+.register-text a:visited {
+  color: var(--brand) !important;
+}

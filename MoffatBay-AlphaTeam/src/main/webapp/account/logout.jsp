@@ -10,9 +10,10 @@
 <title>Logout User</title>
 </head>
 <body>
+<!-- Stephanie: Logout fix -->
 <%
     session.invalidate();
-    response.sendRedirect("index.jsp");
+	response.sendRedirect(request.getContextPath() + "/index.jsp");
 %>
 </body>
 </html>

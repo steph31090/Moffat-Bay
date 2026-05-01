@@ -1,5 +1,6 @@
 <!-- Alpha Team
 	Created by: Stephanie Lara -->
+
 <%@ page import="dao.UserDAO" %>
 
 <%
@@ -29,7 +30,11 @@
     <meta charset="UTF-8">
     <title>Moffat Bay - Login</title>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css?v=10">
 </head>
 
 <body>
@@ -82,14 +87,18 @@
 			        <label for="rememberMe">Remember me</label>
 			    </div>
 			
-			    <input type="submit" value="Sign in" class="signin-btn">
+			    <div class="main-button" style="text-align:center; margin-bottom:30px;">
+    				<a href="#" onclick="this.closest('form').submit(); return false;">Sign In</a>
+				</div>
 
 			</form>
 
-            <p class="register-text">
-                Don't have an account?
-                <a href="register.jsp">Create an account</a>
-            </p>
+			<p class="register-text">
+			  Don't have an account?
+			  <a href="register.jsp" class="text-button">
+			    Create an account <i class="fa fa-arrow-right"></i>
+			  </a>
+			</p>
 			
         </div>
 

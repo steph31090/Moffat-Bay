@@ -101,8 +101,9 @@
 
                 <div class="lookup-detail-row">
                   <div class="lookup-detail-item">
+                    <!--  Stephanie: updated to show room name -->
                     <label>Room Type</label>
-                    <span><%= result.getRoomTypesId() %></span>
+                    <span><%= result.getRoomName() %></span>
                   </div>
                   <div class="lookup-detail-item">
                     <label>Guests</label>
@@ -112,27 +113,31 @@
 
                 <div class="lookup-detail-row">
                   <div class="lookup-detail-item">
+                    <!--  Stephanie: matched DB field name -->
                     <label>Check-In</label>
-                    <span><%= result.getCheckinDate() %></span>
+                    <span><%= result.getCheckInDate() %></span>
                   </div>
                   <div class="lookup-detail-item">
+                    <!--  Stephanie: matched DB field name -->
                     <label>Check-Out</label>
-                    <span><%= result.getCheckoutDate() %>
+                    <span><%= result.getCheckOutDate() %></span>
                   </div>
                 </div>
 
                 <div class="lookup-detail-row">
                   <div class="lookup-detail-item">
-                    <label>Nightly Rate</label>
-                    <span>$<%= String.format("%.2f", result.getNightlyRate()) %></span>
+                    <!--  Stephanie: matched DB field name -->
+                    <label>Room Price</label>
+                    <span>$<%= String.format("%.2f", result.getRoomPrice()) %></span>
                   </div>
                 </div>
 
               </div>
 
               <div class="lookup-card-total">
-                <span>Total Charged</span>
-                <strong>$<%= String.format("%.2f", result.getTotalCost()) %></strong>
+                <!--  Stephanie: matched DB field name -->
+                <span>Total Price</span>
+                <strong>$<%= String.format("%.2f", result.getTotalPrice()) %></strong>
               </div>
 
               <div class="lookup-card-footer">
