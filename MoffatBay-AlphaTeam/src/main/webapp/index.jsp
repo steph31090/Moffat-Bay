@@ -265,7 +265,7 @@
 
                       <div class="image">
 
-                        <img src="images/country-01.jpg" alt="">
+                        <img src="images/country-01.jpg" alt="Cabin 1 in the Woods">
 
                       </div>
 
@@ -281,7 +281,7 @@
 
                         </div>
 
-                        <span>Modern Accomodations</span>
+                        <span>Modern Accommodations</span>
 
                         <div class="main-button">
 
@@ -317,7 +317,7 @@
 
                       <div class="image">
 
-                        <img src="images/country-02.jpg" alt="">
+                        <img src="images/country-02.jpg" alt="Beautiful Views">
 
                       </div>
 
@@ -329,7 +329,7 @@
 
                         <div class="vctext">
 
-                        Attactions
+                        Attractions
 
                         </div>
 
@@ -371,7 +371,7 @@
 
                       <div class="image">
 
-                        <img src="images/country-03.jpg" alt="">
+                        <img src="images/salmon.png" alt="Salish Salmon, Prof Sue's Request!">
 
                       </div>
 
@@ -395,15 +395,15 @@
 
                         </div>
 
-                        <p>Visit our Social Media sites to see pictures stories and news shared by staff and guests!</p>
-
+                        <p>Visit our Social Media sites to see pictures, stories, and news shared by staff and guests!</p>
+                        
                         <ul class="info">
 
                           <li><i class="fa-brands fa-facebook"></i><a href="#">Facebook</a></li>
 
                           <li><i class="fa-brands fa-instagram"></i><a href="#">Instagram</a></li>
 
-                          <li><i class="fa-brands fa-twitter"></i><a href="#">Twitter</a></li>
+                          <li><i class="fa-brands fa-twitter"></i><a href="#">Twitter / X</a></li>
 
                         </ul>
 
