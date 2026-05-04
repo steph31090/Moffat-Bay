@@ -136,6 +136,8 @@ public class ReservationDAO {
                     res.setCheckInDate(rs.getString("checkin_date"));
                     res.setCheckOutDate(rs.getString("checkout_date"));
                     res.setTotalPrice(rs.getDouble("total_price"));
+                    res.setFirstName(rs.getString("first_name")); //Lara: Fixed null names
+                    res.setLastName(rs.getString("last_name")); //Lara: Fixed null names
                     return res;
                 }
             }
